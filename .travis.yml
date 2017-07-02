@@ -1,4 +1,4 @@
-language: crystal
+language: ruby
 
 services:
   - docker
