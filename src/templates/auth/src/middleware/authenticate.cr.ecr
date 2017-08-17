@@ -4,7 +4,7 @@ end
 
 class Authenticate < Amber::Pipe::Base
   def call(context)
-    user_id = context.session["<%= @name %>_id"]?
+    <%= @name %>_id = context.session["<%= @name %>_id"]?
     if <%= @name %> = <%= @name.capitalize %>.find <%= @name %>_id
       context.current_<%= @name %> = <%= @name %>
       call_next(context)
