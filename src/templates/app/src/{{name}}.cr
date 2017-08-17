@@ -2,7 +2,7 @@ require "amber"
 require "../config/*"
 require "./models/**"
 require "./mailers/**"
-require "./controllers/application_controller"
+require "./middleware/**"
 require "./controllers/**"
 
 Amber::Server.instance.run
