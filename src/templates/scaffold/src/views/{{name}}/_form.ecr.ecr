@@ -12,17 +12,17 @@
   <div class="form-group">
 <% case field.type
    when "text" -%>
-  <%="<"%>%= text_area(name: "<%= field.name -%>", content: <%= @name %>.<%= field.name %>, placeholder: "<%= field.name.capitalize %>", class: "form-control", size: "30x10") -%>
+    <%="<"%>%= text_area(name: "<%= field.name -%>", content: <%= @name %>.<%= field.name %>, placeholder: "<%= field.name.capitalize %>", class: "form-control", size: "30x10") -%>
 <% when "boolean" -%>
-  <div class="checkbox">
-    <%="<"%>%= label(<%=":#{field.name}"%>) -%>
-    <%="<"%>%= check_box(<%=":#{field.name}, checked=#{@name}.#{field.name}.to_s == \"1\""%>) -%>
-  </div>
+    <div class="checkbox">
+      <%="<"%>%= label(<%=":#{field.name}"%>) -%>
+      <%="<"%>%= check_box(<%=":#{field.name}, checked=#{@name}.#{field.name}.to_s == \"1\""%>) -%>
+    </div>
 <% else -%>
-  <%="<"%>%= text_field(name: "<%= field.name %>", value: <%= @name %>.<%= field.name %>, placeholder: "<%= field.name.capitalize %>", class: "form-control") -%>
+    <%="<"%>%= text_field(name: "<%= field.name %>", value: <%= @name %>.<%= field.name %>, placeholder: "<%= field.name.capitalize %>", class: "form-control") -%>
 <% end -%>
   </div>
 <% end -%>
-  <%="<"%>%= submit("Submit", class: "btn btn-primary btn-xs") -%>
-  <%="<"%>%= link_to("back", "/<%= @name %>s", class: "btn btn-default btn-xs") -%>
+    <%="<"%>%= submit("Submit", class: "btn btn-primary btn-xs") -%>
+    <%="<"%>%= link_to("back", "/<%= @name %>s", class: "btn btn-default btn-xs") -%>
 <%="<"%>% end %>
